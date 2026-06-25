@@ -452,6 +452,7 @@ def envelope_power_for_set(idx, xy, triple_map, mode, grid):
         return ENVELOPE_CACHE[key]
     points = xy[list(key[1])]
     total = 0.0
+    log_total = 0.0
     count = 0
     for target in grid:
         tx = target[0] / np.sum(target)
@@ -461,22 +462,23 @@ def envelope_power_for_set(idx, xy, triple_map, mode, grid):
         power = best_power_for_target(idx, triple_map, mode, target)
         if math.isfinite(power):
             total += power
+            log_total += math.log(power + 1.0)
             count += 1
-    value = total / count if count else math.inf
+    value = (total / count, log_total / count) if count else (math.inf, math.inf)
     ENVELOPE_CACHE[key] = value
     return value
 
 
 def score(xy, idx, locus_area, triple_map, mode, weight, objective, grid):
     area = area_for(xy, idx) / locus_area
-    p = (
-        envelope_power_for_set(idx, xy, triple_map, mode, grid)
-        if objective == "envelope"
-        else best_power_for_set(idx, triple_map, mode)
-    )
-    if not math.isfinite(p):
+    if objective == "envelope":
+        p, cost = envelope_power_for_set(idx, xy, triple_map, mode, grid)
+    else:
+        p = best_power_for_set(idx, triple_map, mode)
+        cost = math.log(p) if math.isfinite(p) and p > 0 else math.inf
+    if not math.isfinite(p) or not math.isfinite(cost):
         return -math.inf, area, p
-    return weight * area - (1 - weight) * math.log(p), area, p
+    return weight * area - (1 - weight) * cost, area, p
 
 
 def candidate_pool(xy, objective, fixed=()):

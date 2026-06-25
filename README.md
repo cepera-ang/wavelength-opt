@@ -64,7 +64,7 @@ A triangle can cover a large part of the chart while still being terrible for wh
 
 That is why the app shows separate metrics instead of one "best" score.
 
-The `envelope average power` objective tries to catch a different failure mode: a large polygon can hide a whole expensive corner where every clicked color is forced through one weak extreme primary. For each candidate set it samples a coarse grid of points inside the source polygon, solves the cheapest 3-primary mix for each point, and averages that power. This is slower, but it finds helper primaries such as efficient red near 640/660 nm that make a broad region cheaper while a far-red endpoint keeps the last bit of gamut.
+The `envelope average power` objective tries to catch a different failure mode: a large polygon can hide a whole expensive corner where every clicked color is forced through one weak extreme primary. For each candidate set it samples a coarse grid of points inside the source polygon, solves the cheapest 3-primary mix for each point, and scores the Pareto trade-off between gamut area and average `log(power + 1)`. The raw average power is still shown as a metric, but the optimizer uses the log cost so one deep-red or deep-blue edge does not dominate the whole choice.
 
 ## Controls
 

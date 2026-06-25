@@ -57,7 +57,7 @@ function pick() {
     if (objective === "gamut") return stats.coverage;
     if (objective === "white") return stats.coverage / Math.log(stats.power + 1);
     if (objective === "image") return stats.imageCoverage / Math.log(stats.imagePower + 1);
-    if (objective === "envelope") return stats.coverage / Math.log(stats.envelopePower + 1);
+    if (objective === "envelope") return stats.coverage / stats.envelopeLogPower;
     const wanted = Math.abs(kindWeight(row.kind) / 100 - bias);
     return (stats.coverage * 0.35 + stats.imageCoverage * 0.25 + stats.envelopeCoverage * 0.25) / Math.log(stats.power + stats.imagePower + stats.envelopePower + 1) - wanted * 0.15;
   };
@@ -254,16 +254,19 @@ function imagePowerStats(points, row) {
 function envelopePowerStats(points, row) {
   let count = 0;
   let total = 0;
+  let logTotal = 0;
   for (const sample of envelopeGrid) {
     if (!inPoly(sample.x, sample.y, points)) continue;
     const power = powerForTarget(points, row, sample);
     if (!Number.isFinite(power)) continue;
     count++;
     total += power;
+    logTotal += Math.log(power + 1);
   }
   return {
     envelopeCoverage: envelopeGrid.length ? count / envelopeGrid.length : 0,
     envelopePower: count ? total / count : Infinity,
+    envelopeLogPower: count ? logTotal / count : Infinity,
   };
 }
 
