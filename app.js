@@ -135,6 +135,13 @@ function rgb(x, y) {
   return [enc(r), enc(g), enc(b)];
 }
 
+function wavelengthColor(wave) {
+  const index = Math.max(0, Math.min(wl.length - 1, wl.indexOf(wave)));
+  const point = data.locus[index] || data.points.ideal[index];
+  const color = rgb(point[0], point[1]);
+  return `rgb(${color[0]},${color[1]},${color[2]})`;
+}
+
 function polyArea(points) {
   let sum = 0;
   for (let i = 0; i < points.length; i++) {
@@ -381,8 +388,10 @@ function drawMix(row, stats) {
   points.forEach((point, i) => {
     const x = left + ((point.wl - WL_MIN_JS) / (WL_MAX_JS - WL_MIN_JS)) * (right - left);
     const h = (barValues[i] / maxAmount) * (bottom - top);
-    ctx.fillStyle = barValues[i] > 0 ? "#d62828" : "#9aa4b2";
+    ctx.fillStyle = barValues[i] > 0 ? wavelengthColor(point.wl) : "#9aa4b2";
     ctx.fillRect(x - 5 * dpr, bottom - h, 10 * dpr, h);
+    ctx.strokeStyle = "rgba(15,23,42,.55)";
+    ctx.strokeRect(x - 5 * dpr, bottom - h, 10 * dpr, h);
     ctx.fillStyle = "#334155";
     ctx.fillText(String(point.wl), x - 12 * dpr, bottom + 16 * dpr);
   });
