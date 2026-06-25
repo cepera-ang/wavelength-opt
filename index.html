@@ -43,6 +43,11 @@ let targetPoint = null;
 let movedDuringDrag = false;
 
 const locus = data.locus.map((p, i) => ({ x: p[0], y: p[1], wl: wl[i] }));
+const referenceGamuts = [
+  { name: "sRGB", points: [{ x: 0.64, y: 0.33 }, { x: 0.30, y: 0.60 }, { x: 0.15, y: 0.06 }] },
+  { name: "P3", points: [{ x: 0.68, y: 0.32 }, { x: 0.265, y: 0.69 }, { x: 0.15, y: 0.06 }] },
+  { name: "Adobe RGB", points: [{ x: 0.64, y: 0.33 }, { x: 0.21, y: 0.71 }, { x: 0.15, y: 0.06 }] },
+];
 const xMin = -0.02;
 const xMax = 0.78;
 const yMin = -0.04;
@@ -325,6 +330,25 @@ function drawLine(ctx, canvas, points, close = true) {
   ctx.stroke();
 }
 
+function drawReferenceGamuts(ctx, canvas) {
+  const dpr = window.devicePixelRatio || 1;
+  ctx.save();
+  ctx.lineWidth = Math.max(1, 0.8 * dpr);
+  ctx.setLineDash([4 * dpr, 4 * dpr]);
+  referenceGamuts.forEach((gamut) => {
+    ctx.strokeStyle = "rgba(20,24,31,.24)";
+    drawLine(ctx, canvas, gamut.points);
+  });
+  ctx.setLineDash([]);
+  ctx.font = `${10 * dpr}px Segoe UI`;
+  ctx.fillStyle = "rgba(20,24,31,.45)";
+  referenceGamuts.forEach((gamut, i) => {
+    const [x, y] = toPx(canvas, gamut.points[1].x, gamut.points[1].y);
+    ctx.fillText(gamut.name, x + 5 * dpr, y + (12 + i * 11) * dpr);
+  });
+  ctx.restore();
+}
+
 function drawCie(row) {
   const canvas = $("cie");
   fit(canvas);
@@ -346,6 +370,7 @@ function drawCie(row) {
   ctx.strokeStyle = "#000";
   ctx.lineWidth = 2;
   drawLine(ctx, canvas, locus);
+  drawReferenceGamuts(ctx, canvas);
 
   const chosen = customStats(row).points;
   ctx.fillStyle = "rgba(214,40,40,.15)";
