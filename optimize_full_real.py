@@ -767,7 +767,7 @@ def write_html(wl, xy, xyz, real_xy, source_rows, results, summary):
 </head>
 <body>
 <main>
-<div class="top"><div><h1>Wavelength Primary Optimizer</h1><p>CIE 1931, D65 white power, ideal 1 nm vs real source estimates.</p></div><div class="small">Real mode uses sourced wavelength availability plus WPE estimates. Phosphors are broad, shown as real sources but not true 1 nm emitters.</div></div>
+<div class="top"><div><h1>Wavelength Primary Optimizer</h1><p>CIE 1931, D65 white power, ideal 1 nm vs real source estimates. <a href="https://github.com/cepera-ang/wavelength-opt">GitHub repo</a></p></div><div class="small">Real mode uses sourced wavelength availability plus WPE estimates. Phosphors are broad, shown as real sources but not true 1 nm emitters.</div></div>
 <section class="grid">
 <div class="panel"><canvas id="cie" class="chart"></canvas></div>
 <div class="panel controls">
