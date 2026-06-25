@@ -1,12 +1,48 @@
 # Wavelength Primary Optimizer
 
+> **Disclaimer:** this is a quick modelling exercise made with Codex. It has had only basic sanity checks, not a careful color-science review. Do not use it for engineering, medical, safety, purchasing, display design, lighting design, or any other real decision. It is meant only as a toy to build some intuition about CIE color models, spectral primaries, eye sensitivity, and power trade-offs.
+
 Interactive CIE 1931 primary wavelength optimizer.
+
+Working site: https://cepera-ang.github.io/wavelength-opt/
 
 This started from a Bluesky question:
 
 > "what is the minimum number of pure wavelength lasers to cover most of the area ... extreme ends of spectrum will not cut it ... very blue/red is awful and it will require immense power"
 
 Source: https://bsky.app/profile/tussles-shriek.bsky.social/post/3mp3smstlro24
+
+## Color basics
+
+### CIE 1931 chromaticity chart
+
+![CIE 1931 chromaticity diagram](https://commons.wikimedia.org/wiki/Special:FilePath/CIExy1931.svg)
+
+The CIE 1931 xy chart is a 2D map of visible color chromaticity. It ignores brightness and keeps only color direction. The curved outer edge is the spectral locus: pure single-wavelength light. The straight bottom edge is the line of purples, which cannot be made by one wavelength alone.
+
+If you pick light sources as primaries, mixtures of those primaries land inside the polygon formed by their points. Three primaries make a triangle. More primaries make a larger polygon. This is why the app draws red polygons over the CIE chart.
+
+Authoritative data source used here: [CIE 1931 colour-matching functions, 2 degree observer](https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer).
+
+### Eye and retina sensitivity
+
+![Human cone fundamentals](https://commons.wikimedia.org/wiki/Special:FilePath/Cone-fundamentals-with-srgb-spectrum.svg)
+
+Human daylight color vision comes mostly from three cone classes: S, M, and L cones. They are often loosely called blue, green, and red cones, but their response curves are broad and overlap a lot.
+
+The eye is much less sensitive at the deep blue and deep red ends of the visible spectrum. That means a primary near an extreme wavelength can be great for gamut area but bad for lumens per watt. A display or light engine may need a lot of radiant power there to produce the same perceived brightness.
+
+Useful references:
+
+- [CVRL cone fundamentals](https://www.cvrl.org/cones.htm)
+- [CIE spectral luminous efficiency for photopic vision](https://cie.co.at/datatable/cie-spectral-luminous-efficiency-photopic-vision)
+- [IES definition of CIE photopic luminous efficiency V(lambda)](https://ies.org/definitions/cie-photopic-luminous-efficiency-function/)
+
+### Primaries and power
+
+A primary is one source color used for mixing. In the ideal mode, a primary is a perfect 1 nm spectral line. In real-source mode, it is a rough model of available lasers, LEDs, or phosphor-converted sources.
+
+Large gamut is not the same as low power. A set of primaries can cover a lot of area but still be inefficient if important colors, especially D65 white, require a weak deep-red or deep-blue source. The app therefore shows area, D65 white power, typical-image power, and spectral reach as separate numbers.
 
 ## What it does
 
