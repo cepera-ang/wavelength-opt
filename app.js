@@ -27,9 +27,23 @@ const imageSamples = [
   { x: 0.30, y: 0.60, w: 0.05, name: "green" },
   { x: 0.15, y: 0.06, w: 0.05, name: "blue" },
 ];
+const envelopeGrid = [];
+for (let x = 0.04; x <= 0.72; x += 0.04) {
+  for (let y = 0.04; y <= 0.84; y += 0.04) {
+    if (inPoly(x, y, locus)) envelopeGrid.push({ x, y });
+  }
+}
 
 function kindWeight(kind) {
   return kind === "max_area" ? 100 : Math.round(parseFloat(kind.split("_")[1]) * 100);
+}
+
+function objectiveRank(row) {
+  return { gamut: 0, white: 1, envelope: 2 }[row.objective] ?? 9;
+}
+
+function rowOrder(a, b) {
+  return objectiveRank(a) - objectiveRank(b) || a.n - b.n || a.kind.localeCompare(b.kind);
 }
 
 function rows() {
@@ -43,8 +57,9 @@ function pick() {
     if (objective === "gamut") return stats.coverage;
     if (objective === "white") return stats.coverage / Math.log(stats.power + 1);
     if (objective === "image") return stats.imageCoverage / Math.log(stats.imagePower + 1);
+    if (objective === "envelope") return stats.coverage / Math.log(stats.envelopePower + 1);
     const wanted = Math.abs(kindWeight(row.kind) / 100 - bias);
-    return (stats.coverage * 0.45 + stats.imageCoverage * 0.35) / Math.log(stats.power + stats.imagePower + 1) - wanted * 0.15;
+    return (stats.coverage * 0.35 + stats.imageCoverage * 0.25 + stats.envelopeCoverage * 0.25) / Math.log(stats.power + stats.imagePower + stats.envelopePower + 1) - wanted * 0.15;
   };
   return rows().reduce((best, row) => (scoreRow(row) > scoreRow(best) ? row : best), rows()[0]);
 }
@@ -236,13 +251,30 @@ function imagePowerStats(points, row) {
   };
 }
 
+function envelopePowerStats(points, row) {
+  let count = 0;
+  let total = 0;
+  for (const sample of envelopeGrid) {
+    if (!inPoly(sample.x, sample.y, points)) continue;
+    const power = powerForTarget(points, row, sample);
+    if (!Number.isFinite(power)) continue;
+    count++;
+    total += power;
+  }
+  return {
+    envelopeCoverage: envelopeGrid.length ? count / envelopeGrid.length : 0,
+    envelopePower: count ? total / count : Infinity,
+  };
+}
+
 function customStats(row) {
   const points = chosenPoints(row);
   const image = imagePowerStats(points, row);
-  if (!custom) return { coverage: row.coverage, power: row.power, spectralReach: row.spectralReach, points, ...image };
+  const envelope = envelopePowerStats(points, row);
+  if (!custom) return { coverage: row.coverage, power: row.power, spectralReach: row.spectralReach, points, ...image, ...envelope };
   const best = powerForTarget(points, row, { x: data.d65[0], y: data.d65[1] });
   const uniqueWaves = new Set(points.map((point) => point.wl));
-  return { coverage: polyArea(points) / locusArea, power: best, spectralReach: uniqueWaves.size / wl.length, points, ...image };
+  return { coverage: polyArea(points) / locusArea, power: best, spectralReach: uniqueWaves.size / wl.length, points, ...image, ...envelope };
 }
 
 function drawLine(ctx, canvas, points, close = true) {
@@ -414,6 +446,8 @@ function render() {
   $("powerLabel").textContent = `${mode === "ideal" ? "radiant" : "electric"} D65 white`;
   $("imagePower").textContent = Number.isFinite(stats.imagePower) ? `${stats.imagePower.toFixed(2)}x` : "no image";
   $("imagePowerLabel").textContent = `typical image; ${(100 * stats.imageCoverage).toFixed(0)}% samples`;
+  $("envelopePower").textContent = Number.isFinite(stats.envelopePower) ? `${stats.envelopePower.toFixed(2)}x` : "no grid";
+  $("envelopePowerLabel").textContent = `envelope avg; ${(100 * stats.envelopeCoverage).toFixed(0)}% grid`;
   $("reach").textContent = `${(100 * stats.spectralReach).toFixed(1)}%`;
   $("reachLabel").textContent = "spectral reach";
   $("waves").innerHTML = stats.points.map((point) => `<span class="pill">${point.originalWl || point.wl} -> ${point.wl} nm</span>`).join(" ");
@@ -421,17 +455,18 @@ function render() {
   drawEnv(row);
   drawMix(row, stats);
 
-  table($("summary"), ["Mode", "N", "Pick", "nm", "Cover", "Reach", "D65", "Image"], data.summary
+  table($("summary"), ["Mode", "N", "Pick", "nm", "Cover", "Reach", "D65", "Image", "Envelope"], data.summary
     .filter((r) => r.mode === mode)
+    .sort(rowOrder)
     .map((r) => {
       const s = customStats(r);
-      return `<tr><td>${r.mode}</td><td>${r.n}</td><td>${r.kind}</td><td>${r.wavelengths.join(" ")}</td><td>${(100 * r.coverage).toFixed(1)}%</td><td>${(100 * r.spectralReach).toFixed(1)}%</td><td>${r.power.toFixed(2)}x</td><td>${s.imagePower.toFixed(2)}x</td></tr>`;
+      return `<tr><td>${r.mode}</td><td>${r.n}</td><td>${r.kind}</td><td>${r.wavelengths.join(" ")}</td><td>${(100 * r.coverage).toFixed(1)}%</td><td>${(100 * r.spectralReach).toFixed(1)}%</td><td>${r.power.toFixed(2)}x</td><td>${s.imagePower.toFixed(2)}x</td><td>${s.envelopePower.toFixed(2)}x</td></tr>`;
     }));
-  table($("choices"), ["Kind", "nm", "Cover", "Reach", "D65", "Image"], rows()
-    .sort((a, b) => a.power - b.power)
+  table($("choices"), ["Kind", "nm", "Cover", "Reach", "D65", "Image", "Envelope"], rows()
+    .sort((a, b) => objectiveRank(a) - objectiveRank(b) || a.power - b.power)
     .map((r) => {
       const s = customStats(r);
-      return `<tr><td>${r.kind}</td><td>${r.wavelengths.join(" ")}</td><td>${(100 * r.coverage).toFixed(1)}%</td><td>${(100 * r.spectralReach).toFixed(1)}%</td><td>${r.power.toFixed(2)}x</td><td>${s.imagePower.toFixed(2)}x</td></tr>`;
+      return `<tr><td>${r.kind}</td><td>${r.wavelengths.join(" ")}</td><td>${(100 * r.coverage).toFixed(1)}%</td><td>${(100 * r.spectralReach).toFixed(1)}%</td><td>${r.power.toFixed(2)}x</td><td>${s.imagePower.toFixed(2)}x</td><td>${s.envelopePower.toFixed(2)}x</td></tr>`;
     }));
   const chosen = new Set(row.wavelengths);
   table($("sources"), ["nm", "source", "WPE", "FWHM", "note"], data.sources

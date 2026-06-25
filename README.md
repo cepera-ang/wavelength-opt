@@ -55,6 +55,7 @@ It lets you compare:
 - gamut area
 - power to make D65 white
 - average power for a small typical-image color sample set
+- average power over a coarse grid inside the selected gamut envelope
 - spectral reach from source bandwidth
 
 ## Why area alone is not enough
@@ -63,11 +64,13 @@ A triangle can cover a large part of the chart while still being terrible for wh
 
 That is why the app shows separate metrics instead of one "best" score.
 
+The `envelope average power` objective tries to catch a different failure mode: a large polygon can hide a whole expensive corner where every clicked color is forced through one weak extreme primary. For each candidate set it samples a coarse grid of points inside the source polygon, solves the cheapest 3-primary mix for each point, and averages that power. This is slower, but it finds helper primaries such as efficient red near 640/660 nm that make a broad region cheaper while a far-red endpoint keeps the last bit of gamut.
+
 ## Controls
 
 - `Ideal radiant`: treat each source as a perfect 1 nm spectral line.
 - `Real source`: use rough real-world source efficiency and bandwidth estimates.
-- `Optimize for`: choose whether the picked set should prefer gamut, D65 white power, typical image power, or a balanced mix.
+- `Optimize for`: choose whether the picked set should prefer gamut, D65 white power, typical image power, envelope-average power, or a balanced mix.
 - `Primary count`: choose how many primaries are allowed.
 - `Gamut vs power`: steer the Pareto choice toward area or efficiency.
 
@@ -75,10 +78,14 @@ In ideal mode, the red points can be dragged inside the CIE locus. The app recom
 
 ## Caveats
 
-The real-source model is an estimate, not a parts database. Real LEDs, lasers, and phosphors vary by vendor, drive current, temperature, optics, binning, and bandwidth. Phosphor sources are broad and cannot be treated as true 1 nm primaries.
+The real-source model is an estimate, not a parts database. Real LEDs, lasers, and phosphors vary by vendor, drive current, temperature, optics, binning, and bandwidth. Phosphor, OLED, and quantum-dot sources are broad and cannot be treated as true 1 nm primaries.
+
+The current real-source model was revised from the notes in [`docs/`](docs/) and uses rough visible-band anchors: Nichia-class UV-A/violet LEDs, efficient blue InGaN LEDs/lasers, a 527 nm high-WPE green LED peak, broad phosphor/OLED/QD estimates through yellow-orange, and high-efficiency 640/660 nm red horticulture LEDs. These are deliberately approximate; the app is for intuition, not part selection.
 
 The typical-image score is a simple fixed sample set, not a measured image corpus.
 
 ## Data
 
 The optimizer uses CIE 1931 2 degree color matching functions and photopic luminous efficiency data from CIE tables included in this repo.
+
+`optimize_full_real.py` caches expensive triple scans as local `triples_*.npz` files and prints progress bars. Those cache files are ignored by git because they are hundreds of MB. Use `uv run --with numpy --with tqdm python optimize_full_real.py --workers 8` to rebuild with multiple worker processes when a cache is stale.

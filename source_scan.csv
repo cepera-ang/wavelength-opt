@@ -1,322 +1,322 @@
 wavelength,kind,efficiency,name,fwhm_nm,note
-380,led,0.08,narrow LED estimate,25,LED
-381,led,0.0856,narrow LED estimate,25,LED
-382,led,0.0912,narrow LED estimate,25,LED
-383,led,0.0968,narrow LED estimate,25,LED
-384,led,0.1024,narrow LED estimate,25,LED
-385,led,0.108,narrow LED estimate,25,LED
-386,led,0.1136,narrow LED estimate,25,LED
-387,led,0.1192,narrow LED estimate,25,LED
-388,led,0.1248,narrow LED estimate,25,LED
-389,led,0.1304,narrow LED estimate,25,LED
-390,led,0.136,narrow LED estimate,25,LED
-391,led,0.1416,narrow LED estimate,25,LED
-392,led,0.1472,narrow LED estimate,25,LED
-393,led,0.1528,narrow LED estimate,25,LED
-394,led,0.1584,narrow LED estimate,25,LED
-395,led,0.164,narrow LED estimate,25,LED
-396,led,0.1696,narrow LED estimate,25,LED
-397,led,0.1752,narrow LED estimate,25,LED
-398,led,0.1808,narrow LED estimate,25,LED
-399,led,0.1864,narrow LED estimate,25,LED
-400,led,0.192,narrow LED estimate,25,LED
-401,led,0.1976,narrow LED estimate,25,LED
-402,led,0.2032,narrow LED estimate,25,LED
-403,led,0.2088,narrow LED estimate,25,LED
-404,led,0.2144,narrow LED estimate,25,LED
-405,led,0.22,narrow LED estimate,25,LED
-406,led,0.2293,narrow LED estimate,25,LED
-407,led,0.2386,narrow LED estimate,25,LED
-408,led,0.2479,narrow LED estimate,25,LED
-409,led,0.2572,narrow LED estimate,25,LED
-410,led,0.2665,narrow LED estimate,25,LED
-411,led,0.2758,narrow LED estimate,25,LED
-412,led,0.2851,narrow LED estimate,25,LED
-413,led,0.2944,narrow LED estimate,25,LED
-414,led,0.3037,narrow LED estimate,25,LED
-415,led,0.313,narrow LED estimate,25,LED
-416,led,0.3223,narrow LED estimate,25,LED
-417,led,0.3316,narrow LED estimate,25,LED
-418,led,0.3409,narrow LED estimate,25,LED
-419,led,0.3502,narrow LED estimate,25,LED
-420,led,0.3595,narrow LED estimate,25,LED
-421,led,0.3688,narrow LED estimate,25,LED
-422,led,0.3781,narrow LED estimate,25,LED
-423,led,0.3874,narrow LED estimate,25,LED
-424,led,0.3967,narrow LED estimate,25,LED
-425,led,0.406,narrow LED estimate,25,LED
-426,led,0.4153,narrow LED estimate,25,LED
-427,led,0.4247,narrow LED estimate,25,LED
-428,led,0.434,narrow LED estimate,25,LED
-429,led,0.4433,narrow LED estimate,25,LED
-430,led,0.4526,narrow LED estimate,25,LED
-431,led,0.4619,narrow LED estimate,25,LED
-432,led,0.4712,narrow LED estimate,25,LED
-433,led,0.4805,narrow LED estimate,25,LED
-434,led,0.4898,narrow LED estimate,25,LED
-435,led,0.4991,narrow LED estimate,25,LED
-436,led,0.5084,narrow LED estimate,25,LED
-437,led,0.5177,narrow LED estimate,25,LED
-438,led,0.527,narrow LED estimate,25,LED
-439,led,0.5363,narrow LED estimate,25,LED
-440,led,0.5456,narrow LED estimate,25,LED
-441,led,0.5549,narrow LED estimate,25,LED
-442,led,0.5642,narrow LED estimate,25,LED
-443,led,0.5735,narrow LED estimate,25,LED
-444,led,0.5828,narrow LED estimate,25,LED
-445,led,0.5921,narrow LED estimate,25,LED
-446,led,0.6014,narrow LED estimate,25,LED
-447,led,0.6107,narrow LED estimate,25,LED
-448,led,0.62,narrow LED estimate,25,LED
-449,led,0.6114,narrow LED estimate,25,LED
-450,led,0.6027,narrow LED estimate,25,LED
-451,led,0.5941,narrow LED estimate,25,LED
-452,led,0.5854,narrow LED estimate,25,LED
-453,led,0.5768,narrow LED estimate,25,LED
-454,led,0.5681,narrow LED estimate,25,LED
-455,led,0.5595,narrow LED estimate,25,LED
-456,led,0.5508,narrow LED estimate,25,LED
-457,led,0.5422,narrow LED estimate,25,LED
-458,led,0.5335,narrow LED estimate,25,LED
-459,led,0.5249,narrow LED estimate,25,LED
-460,led,0.5162,narrow LED estimate,25,LED
-461,led,0.5076,narrow LED estimate,25,LED
-462,led,0.4989,narrow LED estimate,25,LED
-463,led,0.4903,narrow LED estimate,25,LED
-464,led,0.4816,narrow LED estimate,25,LED
-465,led,0.473,narrow LED estimate,25,LED
-466,led,0.4643,narrow LED estimate,25,LED
-467,led,0.4557,narrow LED estimate,25,LED
-468,led,0.447,narrow LED estimate,25,LED
-469,led,0.4384,narrow LED estimate,25,LED
-470,led,0.4297,narrow LED estimate,25,LED
-471,led,0.4211,narrow LED estimate,25,LED
-472,led,0.4124,narrow LED estimate,25,LED
-473,led,0.4038,narrow LED estimate,25,LED
-474,led,0.3951,narrow LED estimate,25,LED
-475,led,0.3865,narrow LED estimate,25,LED
-476,led,0.3778,narrow LED estimate,25,LED
-477,led,0.3692,narrow LED estimate,25,LED
-478,led,0.3605,narrow LED estimate,25,LED
-479,led,0.3519,narrow LED estimate,25,LED
-480,led,0.3432,narrow LED estimate,25,LED
-481,led,0.3346,narrow LED estimate,25,LED
-482,led,0.3259,narrow LED estimate,25,LED
-483,led,0.3173,narrow LED estimate,25,LED
-484,led,0.3086,narrow LED estimate,25,LED
-485,led,0.3,narrow LED estimate,25,LED
-486,led,0.296,narrow LED estimate,25,LED
-487,led,0.292,narrow LED estimate,25,LED
-488,led,0.288,narrow LED estimate,25,LED
-489,led,0.284,narrow LED estimate,25,LED
-490,led,0.28,narrow LED estimate,25,LED
-491,led,0.276,narrow LED estimate,25,LED
-492,led,0.272,narrow LED estimate,25,LED
-493,led,0.268,narrow LED estimate,25,LED
-494,led,0.264,narrow LED estimate,25,LED
-495,led,0.26,narrow LED estimate,25,LED
-496,led,0.256,narrow LED estimate,25,LED
-497,led,0.252,narrow LED estimate,25,LED
-498,led,0.248,narrow LED estimate,25,LED
-499,led,0.244,narrow LED estimate,25,LED
-500,led,0.24,narrow LED estimate,25,LED
-501,led,0.236,narrow LED estimate,25,LED
-502,led,0.232,narrow LED estimate,25,LED
-503,led,0.228,narrow LED estimate,25,LED
-504,led,0.224,narrow LED estimate,25,LED
-505,led,0.22,narrow LED estimate,25,LED
-506,led,0.2273,narrow LED estimate,25,LED
-507,led,0.2345,narrow LED estimate,25,LED
-508,led,0.2418,narrow LED estimate,25,LED
-509,led,0.2491,narrow LED estimate,25,LED
-510,led,0.2564,narrow LED estimate,25,LED
-511,led,0.2636,narrow LED estimate,25,LED
-512,led,0.2709,narrow LED estimate,25,LED
-513,led,0.2782,narrow LED estimate,25,LED
-514,led,0.2855,narrow LED estimate,25,LED
-515,led,0.2927,narrow LED estimate,25,LED
-516,led,0.3,narrow LED estimate,25,LED
-517,led,0.3073,narrow LED estimate,25,LED
-518,led,0.3145,narrow LED estimate,25,LED
-519,led,0.3218,narrow LED estimate,25,LED
-520,led,0.3291,narrow LED estimate,25,LED
-521,led,0.3364,narrow LED estimate,25,LED
-522,led,0.3436,narrow LED estimate,25,LED
-523,led,0.3509,narrow LED estimate,25,LED
-524,led,0.3582,narrow LED estimate,25,LED
-525,led,0.3655,narrow LED estimate,25,LED
-526,led,0.3727,narrow LED estimate,25,LED
-527,led,0.38,narrow LED estimate,25,LED
-528,led,0.3736,narrow LED estimate,25,LED
-529,led,0.3671,narrow LED estimate,25,LED
-530,led,0.3607,narrow LED estimate,25,LED
-531,led,0.3543,narrow LED estimate,25,LED
-532,led,0.3479,narrow LED estimate,25,LED
-533,led,0.3414,narrow LED estimate,25,LED
-534,led,0.335,narrow LED estimate,25,LED
-535,led,0.3286,narrow LED estimate,25,LED
-536,led,0.3221,narrow LED estimate,25,LED
-537,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-538,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-539,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-540,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-541,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-542,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-543,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-544,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-545,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-546,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-547,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-548,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-549,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-550,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-551,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-552,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-553,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-554,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-555,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-556,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-557,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-558,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-559,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-560,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-561,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-562,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-563,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-564,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-565,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-566,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-567,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-568,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-569,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-570,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-571,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-572,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-573,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-574,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-575,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-576,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-577,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-578,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-579,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-580,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-581,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-582,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-583,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-584,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-585,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-586,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-587,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-588,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-589,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-590,phosphor,0.32,"phosphor converted, broad band",70,phosphor
-591,phosphor,0.316,"phosphor converted, broad band",70,phosphor
-592,phosphor,0.312,"phosphor converted, broad band",70,phosphor
-593,phosphor,0.308,"phosphor converted, broad band",70,phosphor
-594,phosphor,0.304,"phosphor converted, broad band",70,phosphor
-595,phosphor,0.3,"phosphor converted, broad band",70,phosphor
-596,phosphor,0.296,"phosphor converted, broad band",70,phosphor
-597,phosphor,0.292,"phosphor converted, broad band",70,phosphor
-598,phosphor,0.288,"phosphor converted, broad band",70,phosphor
-599,phosphor,0.284,"phosphor converted, broad band",70,phosphor
-600,phosphor,0.28,"phosphor converted, broad band",70,phosphor
-601,phosphor,0.276,"phosphor converted, broad band",70,phosphor
-602,phosphor,0.272,"phosphor converted, broad band",70,phosphor
-603,phosphor,0.268,"phosphor converted, broad band",70,phosphor
-604,phosphor,0.264,"phosphor converted, broad band",70,phosphor
-605,phosphor,0.26,"phosphor converted, broad band",70,phosphor
-606,phosphor,0.256,"phosphor converted, broad band",70,phosphor
-607,phosphor,0.252,"phosphor converted, broad band",70,phosphor
-608,phosphor,0.248,"phosphor converted, broad band",70,phosphor
-609,led,0.2509,narrow LED estimate,25,LED
-610,led,0.2618,narrow LED estimate,25,LED
-611,led,0.2727,narrow LED estimate,25,LED
-612,led,0.2836,narrow LED estimate,25,LED
-613,led,0.2945,narrow LED estimate,25,LED
-614,led,0.3055,narrow LED estimate,25,LED
-615,led,0.3164,narrow LED estimate,25,LED
-616,led,0.3273,narrow LED estimate,25,LED
-617,led,0.3382,narrow LED estimate,25,LED
-618,led,0.3491,narrow LED estimate,25,LED
-619,led,0.36,narrow LED estimate,25,LED
-620,led,0.3709,narrow LED estimate,25,LED
-621,led,0.3818,narrow LED estimate,25,LED
-622,led,0.3927,narrow LED estimate,25,LED
-623,led,0.4036,narrow LED estimate,25,LED
-624,led,0.4145,narrow LED estimate,25,LED
-625,led,0.4255,narrow LED estimate,25,LED
-626,led,0.4364,narrow LED estimate,25,LED
-627,led,0.4473,narrow LED estimate,25,LED
-628,led,0.4582,narrow LED estimate,25,LED
-629,led,0.4691,narrow LED estimate,25,LED
-630,led,0.48,narrow LED estimate,25,LED
-631,led,0.4793,narrow LED estimate,25,LED
-632,led,0.4787,narrow LED estimate,25,LED
-633,led,0.478,narrow LED estimate,25,LED
-634,led,0.4773,narrow LED estimate,25,LED
-635,led,0.4767,narrow LED estimate,25,LED
-636,led,0.476,narrow LED estimate,25,LED
-637,led,0.4753,narrow LED estimate,25,LED
-638,led,0.4747,narrow LED estimate,25,LED
-639,led,0.474,narrow LED estimate,25,LED
-640,led,0.4733,narrow LED estimate,25,LED
-641,led,0.4727,narrow LED estimate,25,LED
-642,led,0.472,narrow LED estimate,25,LED
-643,led,0.4713,narrow LED estimate,25,LED
-644,led,0.4707,narrow LED estimate,25,LED
-645,led,0.47,narrow LED estimate,25,LED
-646,led,0.4693,narrow LED estimate,25,LED
-647,led,0.4687,narrow LED estimate,25,LED
-648,led,0.468,narrow LED estimate,25,LED
-649,led,0.4673,narrow LED estimate,25,LED
-650,led,0.4667,narrow LED estimate,25,LED
-651,led,0.466,narrow LED estimate,25,LED
-652,led,0.4653,narrow LED estimate,25,LED
-653,led,0.4647,narrow LED estimate,25,LED
-654,led,0.464,narrow LED estimate,25,LED
-655,led,0.4633,narrow LED estimate,25,LED
-656,led,0.4627,narrow LED estimate,25,LED
-657,led,0.462,narrow LED estimate,25,LED
-658,led,0.4613,narrow LED estimate,25,LED
-659,led,0.4607,narrow LED estimate,25,LED
-660,led,0.46,narrow LED estimate,25,LED
-661,led,0.453,narrow LED estimate,25,LED
-662,led,0.446,narrow LED estimate,25,LED
-663,led,0.439,narrow LED estimate,25,LED
-664,led,0.432,narrow LED estimate,25,LED
-665,led,0.425,narrow LED estimate,25,LED
-666,led,0.418,narrow LED estimate,25,LED
-667,led,0.411,narrow LED estimate,25,LED
-668,led,0.404,narrow LED estimate,25,LED
-669,led,0.397,narrow LED estimate,25,LED
-670,led,0.39,narrow LED estimate,25,LED
-671,led,0.383,narrow LED estimate,25,LED
-672,led,0.376,narrow LED estimate,25,LED
-673,led,0.369,narrow LED estimate,25,LED
-674,led,0.362,narrow LED estimate,25,LED
-675,led,0.355,narrow LED estimate,25,LED
-676,led,0.348,narrow LED estimate,25,LED
-677,led,0.341,narrow LED estimate,25,LED
-678,led,0.334,narrow LED estimate,25,LED
-679,laser,0.3293,AlGaInP red laser diode,2,laser diode
-680,laser,0.3267,AlGaInP red laser diode,2,laser diode
-681,laser,0.324,AlGaInP red laser diode,2,laser diode
-682,laser,0.3213,AlGaInP red laser diode,2,laser diode
-683,laser,0.3187,AlGaInP red laser diode,2,laser diode
-684,laser,0.316,AlGaInP red laser diode,2,laser diode
-685,laser,0.3133,AlGaInP red laser diode,2,laser diode
-686,laser,0.3107,AlGaInP red laser diode,2,laser diode
-687,laser,0.308,AlGaInP red laser diode,2,laser diode
-688,laser,0.3053,AlGaInP red laser diode,2,laser diode
-689,laser,0.3027,AlGaInP red laser diode,2,laser diode
-690,laser,0.3,AlGaInP red laser diode,2,laser diode
-691,led,0.243,narrow LED estimate,25,LED
-692,led,0.236,narrow LED estimate,25,LED
-693,led,0.229,narrow LED estimate,25,LED
-694,led,0.222,narrow LED estimate,25,LED
-695,led,0.215,narrow LED estimate,25,LED
-696,led,0.208,narrow LED estimate,25,LED
-697,led,0.201,narrow LED estimate,25,LED
-698,led,0.194,narrow LED estimate,25,LED
-699,led,0.187,narrow LED estimate,25,LED
-700,led,0.18,narrow LED estimate,25,LED
+380,led,0.42,led source estimate,11,Nichia-class UV-A LED; inferred WPE
+381,led,0.43,led source estimate,11,Nichia-class UV-A LED; inferred WPE
+382,led,0.44,led source estimate,11,Nichia-class UV-A LED; inferred WPE
+383,led,0.45,led source estimate,11,Nichia-class UV-A LED; inferred WPE
+384,led,0.46,led source estimate,11,Nichia-class UV-A LED; inferred WPE
+385,led,0.47,led source estimate,11,Nichia-class UV-A LED; inferred WPE
+386,led,0.4675,led source estimate,11,Nichia-class UV-A LED; inferred WPE
+387,led,0.465,led source estimate,11,Nichia-class UV-A LED; inferred WPE
+388,led,0.4625,led source estimate,11,Nichia-class UV-A LED; inferred WPE
+389,led,0.46,led source estimate,11,Nichia-class UV-A LED; inferred WPE
+390,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+391,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+392,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+393,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+394,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+395,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+396,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+397,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+398,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+399,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+400,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+401,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+402,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+403,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+404,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+405,led,0.45,led source estimate,12,violet InGaN LED / laser bin
+406,led,0.48,led source estimate,18,violet-blue InGaN LED estimate
+407,led,0.483,led source estimate,18,violet-blue InGaN LED estimate
+408,led,0.4861,led source estimate,18,violet-blue InGaN LED estimate
+409,led,0.4891,led source estimate,18,violet-blue InGaN LED estimate
+410,led,0.4921,led source estimate,18,violet-blue InGaN LED estimate
+411,led,0.4952,led source estimate,18,violet-blue InGaN LED estimate
+412,led,0.4982,led source estimate,18,violet-blue InGaN LED estimate
+413,led,0.5012,led source estimate,18,violet-blue InGaN LED estimate
+414,led,0.5042,led source estimate,18,violet-blue InGaN LED estimate
+415,led,0.5073,led source estimate,18,violet-blue InGaN LED estimate
+416,led,0.5103,led source estimate,18,violet-blue InGaN LED estimate
+417,led,0.5133,led source estimate,18,violet-blue InGaN LED estimate
+418,led,0.5164,led source estimate,18,violet-blue InGaN LED estimate
+419,led,0.5194,led source estimate,18,violet-blue InGaN LED estimate
+420,led,0.5224,led source estimate,18,violet-blue InGaN LED estimate
+421,led,0.5255,led source estimate,18,violet-blue InGaN LED estimate
+422,led,0.5285,led source estimate,18,violet-blue InGaN LED estimate
+423,led,0.5315,led source estimate,18,violet-blue InGaN LED estimate
+424,led,0.5345,led source estimate,18,violet-blue InGaN LED estimate
+425,led,0.5376,led source estimate,18,violet-blue InGaN LED estimate
+426,led,0.5406,led source estimate,18,violet-blue InGaN LED estimate
+427,led,0.5436,led source estimate,18,violet-blue InGaN LED estimate
+428,led,0.5467,led source estimate,18,violet-blue InGaN LED estimate
+429,led,0.5497,led source estimate,18,violet-blue InGaN LED estimate
+430,led,0.5527,led source estimate,18,violet-blue InGaN LED estimate
+431,led,0.5558,led source estimate,18,violet-blue InGaN LED estimate
+432,led,0.5588,led source estimate,18,violet-blue InGaN LED estimate
+433,led,0.5618,led source estimate,18,violet-blue InGaN LED estimate
+434,led,0.5648,led source estimate,18,violet-blue InGaN LED estimate
+435,led,0.5679,led source estimate,18,violet-blue InGaN LED estimate
+436,led,0.5709,led source estimate,18,violet-blue InGaN LED estimate
+437,led,0.5739,led source estimate,18,violet-blue InGaN LED estimate
+438,led,0.577,led source estimate,18,violet-blue InGaN LED estimate
+439,led,0.58,led source estimate,18,violet-blue InGaN LED estimate
+440,led,0.62,led source estimate,20,high-efficiency blue InGaN LED
+441,led,0.626,led source estimate,20,high-efficiency blue InGaN LED
+442,led,0.632,led source estimate,20,high-efficiency blue InGaN LED
+443,led,0.638,led source estimate,20,high-efficiency blue InGaN LED
+444,led,0.644,led source estimate,20,high-efficiency blue InGaN LED
+445,led,0.65,led source estimate,20,high-efficiency blue InGaN LED
+446,led,0.656,led source estimate,20,high-efficiency blue InGaN LED
+447,led,0.662,led source estimate,20,high-efficiency blue InGaN LED
+448,led,0.668,led source estimate,20,high-efficiency blue InGaN LED
+449,led,0.674,led source estimate,20,high-efficiency blue InGaN LED
+450,led,0.68,led source estimate,20,high-efficiency blue InGaN LED
+451,led,0.6733,led source estimate,20,high-efficiency blue InGaN LED
+452,led,0.6667,led source estimate,20,high-efficiency blue InGaN LED
+453,led,0.66,led source estimate,20,high-efficiency blue InGaN LED
+454,led,0.6533,led source estimate,20,high-efficiency blue InGaN LED
+455,led,0.6467,led source estimate,20,high-efficiency blue InGaN LED
+456,led,0.64,led source estimate,20,high-efficiency blue InGaN LED
+457,led,0.6333,led source estimate,20,high-efficiency blue InGaN LED
+458,led,0.6267,led source estimate,20,high-efficiency blue InGaN LED
+459,led,0.62,led source estimate,20,high-efficiency blue InGaN LED
+460,led,0.58,led source estimate,22,blue LED; docs cite 470 nm bins
+461,led,0.572,led source estimate,22,blue LED; docs cite 470 nm bins
+462,led,0.564,led source estimate,22,blue LED; docs cite 470 nm bins
+463,led,0.556,led source estimate,22,blue LED; docs cite 470 nm bins
+464,led,0.548,led source estimate,22,blue LED; docs cite 470 nm bins
+465,led,0.54,led source estimate,22,blue LED; docs cite 470 nm bins
+466,led,0.532,led source estimate,22,blue LED; docs cite 470 nm bins
+467,led,0.524,led source estimate,22,blue LED; docs cite 470 nm bins
+468,led,0.516,led source estimate,22,blue LED; docs cite 470 nm bins
+469,led,0.508,led source estimate,22,blue LED; docs cite 470 nm bins
+470,led,0.5,led source estimate,22,blue LED; docs cite 470 nm bins
+471,led,0.488,led source estimate,22,blue LED; docs cite 470 nm bins
+472,led,0.476,led source estimate,22,blue LED; docs cite 470 nm bins
+473,led,0.464,led source estimate,22,blue LED; docs cite 470 nm bins
+474,led,0.452,led source estimate,22,blue LED; docs cite 470 nm bins
+475,led,0.44,led source estimate,22,blue LED; docs cite 470 nm bins
+476,led,0.428,led source estimate,22,blue LED; docs cite 470 nm bins
+477,led,0.416,led source estimate,22,blue LED; docs cite 470 nm bins
+478,led,0.404,led source estimate,22,blue LED; docs cite 470 nm bins
+479,led,0.392,led source estimate,22,blue LED; docs cite 470 nm bins
+480,led,0.38,led source estimate,22,blue LED; docs cite 470 nm bins
+481,led,0.34,led source estimate,25,cyan LED; green-gap shoulder
+482,led,0.335,led source estimate,25,cyan LED; green-gap shoulder
+483,led,0.33,led source estimate,25,cyan LED; green-gap shoulder
+484,led,0.325,led source estimate,25,cyan LED; green-gap shoulder
+485,led,0.32,led source estimate,25,cyan LED; green-gap shoulder
+486,led,0.315,led source estimate,25,cyan LED; green-gap shoulder
+487,led,0.31,led source estimate,25,cyan LED; green-gap shoulder
+488,led,0.305,led source estimate,25,cyan LED; green-gap shoulder
+489,led,0.3,led source estimate,25,cyan LED; green-gap shoulder
+490,led,0.295,led source estimate,25,cyan LED; green-gap shoulder
+491,led,0.29,led source estimate,25,cyan LED; green-gap shoulder
+492,led,0.285,led source estimate,25,cyan LED; green-gap shoulder
+493,led,0.28,led source estimate,25,cyan LED; green-gap shoulder
+494,led,0.275,led source estimate,25,cyan LED; green-gap shoulder
+495,led,0.27,led source estimate,25,cyan LED; green-gap shoulder
+496,led,0.265,led source estimate,25,cyan LED; green-gap shoulder
+497,led,0.26,led source estimate,25,cyan LED; green-gap shoulder
+498,led,0.255,led source estimate,25,cyan LED; green-gap shoulder
+499,led,0.25,led source estimate,25,cyan LED; green-gap shoulder
+500,led,0.245,led source estimate,25,cyan LED; green-gap shoulder
+501,led,0.24,led source estimate,25,cyan LED; green-gap shoulder
+502,led,0.235,led source estimate,25,cyan LED; green-gap shoulder
+503,led,0.23,led source estimate,25,cyan LED; green-gap shoulder
+504,led,0.225,led source estimate,25,cyan LED; green-gap shoulder
+505,led,0.22,led source estimate,25,cyan LED; green-gap shoulder
+506,led,0.24,led source estimate,28,cyan-green LED / display emitter
+507,led,0.2457,led source estimate,28,cyan-green LED / display emitter
+508,led,0.2514,led source estimate,28,cyan-green LED / display emitter
+509,led,0.2571,led source estimate,28,cyan-green LED / display emitter
+510,led,0.2629,led source estimate,28,cyan-green LED / display emitter
+511,led,0.2686,led source estimate,28,cyan-green LED / display emitter
+512,led,0.2743,led source estimate,28,cyan-green LED / display emitter
+513,led,0.28,led source estimate,28,cyan-green LED / display emitter
+514,led,0.2857,led source estimate,28,cyan-green LED / display emitter
+515,led,0.2914,led source estimate,28,cyan-green LED / display emitter
+516,led,0.2971,led source estimate,28,cyan-green LED / display emitter
+517,led,0.3029,led source estimate,28,cyan-green LED / display emitter
+518,led,0.3086,led source estimate,28,cyan-green LED / display emitter
+519,led,0.3143,led source estimate,28,cyan-green LED / display emitter
+520,led,0.32,led source estimate,28,cyan-green LED / display emitter
+521,led,0.38,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+522,led,0.4067,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+523,led,0.4333,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+524,led,0.46,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+525,led,0.4867,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+526,led,0.5133,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+527,led,0.54,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+528,led,0.5262,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+529,led,0.5123,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+530,led,0.4985,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+531,led,0.4846,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+532,led,0.4708,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+533,led,0.4569,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+534,led,0.4431,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+535,led,0.4292,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+536,led,0.4154,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+537,led,0.4015,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+538,led,0.3877,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+539,led,0.3738,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+540,led,0.36,led source estimate,30,527 nm high-WPE green LED peak; optimistic
+541,phosphor,0.3,phosphor source estimate,65,lime/yellow phosphor or broad converter
+542,phosphor,0.3017,phosphor source estimate,65,lime/yellow phosphor or broad converter
+543,phosphor,0.3033,phosphor source estimate,65,lime/yellow phosphor or broad converter
+544,phosphor,0.305,phosphor source estimate,65,lime/yellow phosphor or broad converter
+545,phosphor,0.3067,phosphor source estimate,65,lime/yellow phosphor or broad converter
+546,phosphor,0.3083,phosphor source estimate,65,lime/yellow phosphor or broad converter
+547,phosphor,0.31,phosphor source estimate,65,lime/yellow phosphor or broad converter
+548,phosphor,0.3117,phosphor source estimate,65,lime/yellow phosphor or broad converter
+549,phosphor,0.3133,phosphor source estimate,65,lime/yellow phosphor or broad converter
+550,phosphor,0.315,phosphor source estimate,65,lime/yellow phosphor or broad converter
+551,phosphor,0.3167,phosphor source estimate,65,lime/yellow phosphor or broad converter
+552,phosphor,0.3183,phosphor source estimate,65,lime/yellow phosphor or broad converter
+553,phosphor,0.32,phosphor source estimate,65,lime/yellow phosphor or broad converter
+554,phosphor,0.3217,phosphor source estimate,65,lime/yellow phosphor or broad converter
+555,phosphor,0.3233,phosphor source estimate,65,lime/yellow phosphor or broad converter
+556,phosphor,0.325,phosphor source estimate,65,lime/yellow phosphor or broad converter
+557,phosphor,0.3267,phosphor source estimate,65,lime/yellow phosphor or broad converter
+558,phosphor,0.3283,phosphor source estimate,65,lime/yellow phosphor or broad converter
+559,phosphor,0.33,phosphor source estimate,65,lime/yellow phosphor or broad converter
+560,phosphor,0.3317,phosphor source estimate,65,lime/yellow phosphor or broad converter
+561,phosphor,0.3333,phosphor source estimate,65,lime/yellow phosphor or broad converter
+562,phosphor,0.335,phosphor source estimate,65,lime/yellow phosphor or broad converter
+563,phosphor,0.3367,phosphor source estimate,65,lime/yellow phosphor or broad converter
+564,phosphor,0.3383,phosphor source estimate,65,lime/yellow phosphor or broad converter
+565,phosphor,0.34,phosphor source estimate,65,lime/yellow phosphor or broad converter
+566,phosphor,0.3371,phosphor source estimate,65,lime/yellow phosphor or broad converter
+567,phosphor,0.3343,phosphor source estimate,65,lime/yellow phosphor or broad converter
+568,phosphor,0.3314,phosphor source estimate,65,lime/yellow phosphor or broad converter
+569,phosphor,0.3286,phosphor source estimate,65,lime/yellow phosphor or broad converter
+570,phosphor,0.3257,phosphor source estimate,65,lime/yellow phosphor or broad converter
+571,phosphor,0.3229,phosphor source estimate,65,lime/yellow phosphor or broad converter
+572,phosphor,0.32,phosphor source estimate,65,lime/yellow phosphor or broad converter
+573,phosphor,0.3171,phosphor source estimate,65,lime/yellow phosphor or broad converter
+574,phosphor,0.3143,phosphor source estimate,65,lime/yellow phosphor or broad converter
+575,phosphor,0.3114,phosphor source estimate,65,lime/yellow phosphor or broad converter
+576,phosphor,0.3086,phosphor source estimate,65,lime/yellow phosphor or broad converter
+577,phosphor,0.3057,phosphor source estimate,65,lime/yellow phosphor or broad converter
+578,phosphor,0.3029,phosphor source estimate,65,lime/yellow phosphor or broad converter
+579,phosphor,0.3,phosphor source estimate,65,lime/yellow phosphor or broad converter
+580,led,0.12,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+581,led,0.117,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+582,led,0.114,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+583,led,0.111,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+584,led,0.108,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+585,led,0.105,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+586,led,0.102,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+587,led,0.099,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+588,led,0.096,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+589,led,0.093,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+590,led,0.09,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+591,led,0.0933,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+592,led,0.0967,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+593,led,0.1,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+594,led,0.1033,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+595,led,0.1067,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+596,led,0.11,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+597,led,0.1133,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+598,led,0.1167,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+599,led,0.12,led source estimate,18,amber/yellow AlInGaP LED; low WPE zone
+600,oled_qd,0.18,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+601,oled_qd,0.1829,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+602,oled_qd,0.1857,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+603,oled_qd,0.1886,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+604,oled_qd,0.1914,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+605,oled_qd,0.1943,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+606,oled_qd,0.1971,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+607,oled_qd,0.2,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+608,oled_qd,0.2029,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+609,oled_qd,0.2057,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+610,oled_qd,0.2086,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+611,oled_qd,0.2114,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+612,oled_qd,0.2143,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+613,oled_qd,0.2171,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+614,oled_qd,0.22,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+615,oled_qd,0.216,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+616,oled_qd,0.212,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+617,oled_qd,0.208,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+618,oled_qd,0.204,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+619,oled_qd,0.2,oled_qd source estimate,35,orange-red OLED/QD research-class estimate
+620,led,0.38,led source estimate,20,red LED / QD / 638 nm LD anchor
+621,led,0.394,led source estimate,20,red LED / QD / 638 nm LD anchor
+622,led,0.408,led source estimate,20,red LED / QD / 638 nm LD anchor
+623,led,0.422,led source estimate,20,red LED / QD / 638 nm LD anchor
+624,led,0.436,led source estimate,20,red LED / QD / 638 nm LD anchor
+625,led,0.45,led source estimate,20,red LED / QD / 638 nm LD anchor
+626,led,0.464,led source estimate,20,red LED / QD / 638 nm LD anchor
+627,led,0.478,led source estimate,20,red LED / QD / 638 nm LD anchor
+628,led,0.492,led source estimate,20,red LED / QD / 638 nm LD anchor
+629,led,0.506,led source estimate,20,red LED / QD / 638 nm LD anchor
+630,led,0.52,led source estimate,20,red LED / QD / 638 nm LD anchor
+631,led,0.5267,led source estimate,20,red LED / QD / 638 nm LD anchor
+632,led,0.5333,led source estimate,20,red LED / QD / 638 nm LD anchor
+633,led,0.54,led source estimate,20,red LED / QD / 638 nm LD anchor
+634,led,0.5467,led source estimate,20,red LED / QD / 638 nm LD anchor
+635,led,0.5533,led source estimate,20,red LED / QD / 638 nm LD anchor
+636,led,0.56,led source estimate,20,red LED / QD / 638 nm LD anchor
+637,led,0.5667,led source estimate,20,red LED / QD / 638 nm LD anchor
+638,led,0.5733,led source estimate,20,red LED / QD / 638 nm LD anchor
+639,led,0.58,led source estimate,20,red LED / QD / 638 nm LD anchor
+640,led,0.62,led source estimate,18,640 nm red horticulture LED helper
+641,led,0.6267,led source estimate,18,640 nm red horticulture LED helper
+642,led,0.6333,led source estimate,18,640 nm red horticulture LED helper
+643,led,0.64,led source estimate,18,640 nm red horticulture LED helper
+644,led,0.6467,led source estimate,18,640 nm red horticulture LED helper
+645,led,0.6533,led source estimate,18,640 nm red horticulture LED helper
+646,led,0.66,led source estimate,18,640 nm red horticulture LED helper
+647,led,0.6667,led source estimate,18,640 nm red horticulture LED helper
+648,led,0.6733,led source estimate,18,640 nm red horticulture LED helper
+649,led,0.68,led source estimate,18,640 nm red horticulture LED helper
+650,led,0.72,led source estimate,18,660 nm hyper-red horticulture LED
+651,led,0.7268,led source estimate,18,660 nm hyper-red horticulture LED
+652,led,0.7336,led source estimate,18,660 nm hyper-red horticulture LED
+653,led,0.7404,led source estimate,18,660 nm hyper-red horticulture LED
+654,led,0.7472,led source estimate,18,660 nm hyper-red horticulture LED
+655,led,0.754,led source estimate,18,660 nm hyper-red horticulture LED
+656,led,0.7608,led source estimate,18,660 nm hyper-red horticulture LED
+657,led,0.7676,led source estimate,18,660 nm hyper-red horticulture LED
+658,led,0.7744,led source estimate,18,660 nm hyper-red horticulture LED
+659,led,0.7812,led source estimate,18,660 nm hyper-red horticulture LED
+660,led,0.788,led source estimate,18,660 nm hyper-red horticulture LED
+661,led,0.776,led source estimate,18,660 nm hyper-red horticulture LED
+662,led,0.764,led source estimate,18,660 nm hyper-red horticulture LED
+663,led,0.752,led source estimate,18,660 nm hyper-red horticulture LED
+664,led,0.74,led source estimate,18,660 nm hyper-red horticulture LED
+665,led,0.728,led source estimate,18,660 nm hyper-red horticulture LED
+666,led,0.716,led source estimate,18,660 nm hyper-red horticulture LED
+667,led,0.704,led source estimate,18,660 nm hyper-red horticulture LED
+668,led,0.692,led source estimate,18,660 nm hyper-red horticulture LED
+669,led,0.68,led source estimate,18,660 nm hyper-red horticulture LED
+670,laser,0.42,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+671,laser,0.414,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+672,laser,0.408,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+673,laser,0.402,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+674,laser,0.396,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+675,laser,0.39,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+676,laser,0.384,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+677,laser,0.378,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+678,laser,0.372,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+679,laser,0.366,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+680,laser,0.36,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+681,laser,0.354,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+682,laser,0.348,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+683,laser,0.342,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+684,laser,0.336,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+685,laser,0.33,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+686,laser,0.324,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+687,laser,0.318,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+688,laser,0.312,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+689,laser,0.306,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+690,laser,0.3,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+691,laser,0.288,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+692,laser,0.276,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+693,laser,0.264,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+694,laser,0.252,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+695,laser,0.24,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+696,laser,0.228,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+697,laser,0.216,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+698,laser,0.204,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+699,laser,0.192,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
+700,laser,0.18,laser source estimate,2,deep/far red laser diode; product density thins near 700 nm
