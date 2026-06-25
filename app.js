@@ -13,6 +13,7 @@ const referenceGamuts = [
   { name: "sRGB", points: [{ x: 0.64, y: 0.33 }, { x: 0.30, y: 0.60 }, { x: 0.15, y: 0.06 }] },
   { name: "P3", points: [{ x: 0.68, y: 0.32 }, { x: 0.265, y: 0.69 }, { x: 0.15, y: 0.06 }] },
   { name: "Adobe RGB", points: [{ x: 0.64, y: 0.33 }, { x: 0.21, y: 0.71 }, { x: 0.15, y: 0.06 }] },
+  { name: "BT.2020", points: [{ x: 0.708, y: 0.292 }, { x: 0.170, y: 0.797 }, { x: 0.131, y: 0.046 }] },
 ];
 const xMin = -0.02;
 const xMax = 0.78;
