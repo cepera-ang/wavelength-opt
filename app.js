@@ -5,12 +5,16 @@ let objective = "balanced";
 let custom = null;
 let drag = null;
 let currentRow = null;
+let targetPoint = null;
+let movedDuringDrag = false;
 
 const locus = data.locus.map((p, i) => ({ x: p[0], y: p[1], wl: wl[i] }));
 const xMin = -0.02;
 const xMax = 0.78;
 const yMin = -0.04;
 const yMax = 0.9;
+const WL_MIN_JS = 380;
+const WL_MAX_JS = 700;
 const $ = (id) => document.getElementById(id);
 const imageSamples = [
   { x: 0.3127, y: 0.3290, w: 0.35, name: "white/gray" },
@@ -180,9 +184,10 @@ function solve3(matrix, target) {
   return [dx / det, dy / det, dz / det];
 }
 
-function powerForTarget(points, row, targetPoint) {
+function mixForTarget(points, row, targetPoint) {
   const target = xyzFromPoint(targetPoint);
   let best = Infinity;
+  let bestMix = null;
   for (let i = 0; i < points.length; i++) {
     for (let j = i + 1; j < points.length; j++) {
       for (let k = j + 1; k < points.length; k++) {
@@ -191,11 +196,21 @@ function powerForTarget(points, row, targetPoint) {
         const power = mode === "real"
           ? coeff[0] / sourceEff(row.wavelengths[i]) + coeff[1] / sourceEff(row.wavelengths[j]) + coeff[2] / sourceEff(row.wavelengths[k])
           : coeff[0] + coeff[1] + coeff[2];
-        best = Math.min(best, power);
+        if (power < best) {
+          best = power;
+          bestMix = new Array(points.length).fill(0);
+          bestMix[i] = coeff[0];
+          bestMix[j] = coeff[1];
+          bestMix[k] = coeff[2];
+        }
       }
     }
   }
-  return best;
+  return { power: best, mix: bestMix };
+}
+
+function powerForTarget(points, row, targetPoint) {
+  return mixForTarget(points, row, targetPoint).power;
 }
 
 function imagePowerStats(points, row) {
@@ -286,6 +301,21 @@ function drawCie(row) {
   ctx.arc(dx, dy, 4 * (window.devicePixelRatio || 1), 0, Math.PI * 2);
   ctx.fill();
   ctx.fillText("D65", dx + 7, dy + 14);
+
+  if (targetPoint) {
+    const [tx, ty] = toPx(canvas, targetPoint.x, targetPoint.y);
+    ctx.strokeStyle = "#111";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(tx, ty, 9 * (window.devicePixelRatio || 1), 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(tx - 12, ty);
+    ctx.lineTo(tx + 12, ty);
+    ctx.moveTo(tx, ty - 12);
+    ctx.lineTo(tx, ty + 12);
+    ctx.stroke();
+  }
 }
 
 function drawEnv(row) {
@@ -316,6 +346,48 @@ function drawEnv(row) {
   ctx.fillText("power log", canvas.width - 76, canvas.height - 6);
 }
 
+function drawMix(row, stats) {
+  const canvas = $("mix");
+  fit(canvas);
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const points = stats.points;
+  const target = targetPoint || { x: data.d65[0], y: data.d65[1] };
+  const result = mixForTarget(points, row, target);
+  const dpr = window.devicePixelRatio || 1;
+  ctx.font = `${12 * dpr}px Segoe UI`;
+  ctx.fillStyle = "#53606e";
+  ctx.fillText(targetPoint ? `clicked x=${target.x.toFixed(3)} y=${target.y.toFixed(3)}` : "D65 mix preview; click chart for another color", 10 * dpr, 18 * dpr);
+  if (!result.mix) {
+    ctx.fillStyle = "#b42318";
+    ctx.fillText("target is outside selected gamut", 10 * dpr, 42 * dpr);
+    return;
+  }
+  ctx.fillText(`${mode === "real" ? "electric" : "radiant"} power ${result.power.toFixed(2)}x`, 10 * dpr, 40 * dpr);
+
+  const left = 40 * dpr;
+  const right = canvas.width - 14 * dpr;
+  const bottom = canvas.height - 30 * dpr;
+  const top = 56 * dpr;
+  const barValues = result.mix.map((value, i) => mode === "real" ? value / sourceEff(row.wavelengths[i]) : value);
+  const maxAmount = Math.max(...barValues, 1e-9);
+  ctx.strokeStyle = "#d8dee6";
+  ctx.beginPath();
+  ctx.moveTo(left, top);
+  ctx.lineTo(left, bottom);
+  ctx.lineTo(right, bottom);
+  ctx.stroke();
+
+  points.forEach((point, i) => {
+    const x = left + ((point.wl - WL_MIN_JS) / (WL_MAX_JS - WL_MIN_JS)) * (right - left);
+    const h = (barValues[i] / maxAmount) * (bottom - top);
+    ctx.fillStyle = barValues[i] > 0 ? "#d62828" : "#9aa4b2";
+    ctx.fillRect(x - 5 * dpr, bottom - h, 10 * dpr, h);
+    ctx.fillStyle = "#334155";
+    ctx.fillText(String(point.wl), x - 12 * dpr, bottom + 16 * dpr);
+  });
+}
+
 function table(el, cols, rowsHtml) {
   el.innerHTML = `<thead><tr>${cols.map((c) => `<th>${c}</th>`).join("")}</tr></thead><tbody>${rowsHtml.join("")}</tbody>`;
 }
@@ -338,6 +410,7 @@ function render() {
   $("waves").innerHTML = stats.points.map((point) => `<span class="pill">${point.originalWl || point.wl} -> ${point.wl} nm</span>`).join(" ");
   drawCie(row);
   drawEnv(row);
+  drawMix(row, stats);
 
   table($("summary"), ["Mode", "N", "Pick", "nm", "Cover", "Reach", "D65", "Image"], data.summary
     .filter((r) => r.mode === mode)
@@ -371,6 +444,7 @@ $("cie").addEventListener("pointerdown", (event) => {
   });
   if (best) {
     drag = best.wave;
+    movedDuringDrag = false;
     $("cie").setPointerCapture(event.pointerId);
   }
 });
@@ -378,6 +452,7 @@ $("cie").addEventListener("pointerdown", (event) => {
 $("cie").addEventListener("pointermove", (event) => {
   if (!drag) return;
   const point = clampToLocus(fromEvent(event));
+  movedDuringDrag = true;
   custom = custom || {};
   custom[drag] = point;
   render();
@@ -387,14 +462,26 @@ $("cie").addEventListener("pointerup", () => {
   drag = null;
 });
 
+$("cie").addEventListener("click", (event) => {
+  if (movedDuringDrag) {
+    movedDuringDrag = false;
+    return;
+  }
+  const point = fromEvent(event);
+  targetPoint = inPoly(point.x, point.y, locus) ? point : clampToLocus(point);
+  render();
+});
+
 $("idealBtn").onclick = () => {
   mode = "ideal";
   custom = null;
+  targetPoint = null;
   render();
 };
 $("realBtn").onclick = () => {
   mode = "real";
   custom = null;
+  targetPoint = null;
   render();
 };
 ["n", "bias"].forEach((id) => $(id).addEventListener("input", () => {

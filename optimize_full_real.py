@@ -422,6 +422,7 @@ def write_html(wl, xy, xyz, real_xy, source_rows, results, summary):
 <div class="metrics"><div class="metric"><b id="coverage"></b><span>locus area covered</span></div><div class="metric"><b id="power"></b><span id="powerLabel"></span></div></div>
 <div><div class="small">Chosen wavelengths</div><div id="waves"></div></div>
 <canvas id="env" class="mini"></canvas>
+<canvas id="mix" class="mini" title="Click inside the red gamut polygon to see the cheapest mix of selected primaries for that target color."></canvas>
 </div>
 </section>
 <section class="tables">
